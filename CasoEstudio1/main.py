@@ -58,7 +58,7 @@ if __name__ == "__main__":
         elif opcion == "9":
             print("Saliendo del programa...")
             break
- 
+        
         else:
             print("Opción no válida. Intente nuevamente.")
 
