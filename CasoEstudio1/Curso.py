@@ -89,7 +89,7 @@ class Curso:
                 self.notas[i] = 2.5
                 Repeticion += 1
             print(f"Nota {i+1}: antes = {notas_copia[i]}, después = {self.notas[i]}")
-            
+
     __method__ = "EncontrarRepeticion5"
     __params__ = "none"
     __returns__ = "Posicion del tercer 5"
@@ -139,5 +139,48 @@ class Curso:
                 return f'La cantidad minima de notas para lograr 30 es {i+1}'
         return -1
 
+    def cambiarNotas (self):
+        for i in range (len(self.notas)):
+            if self.notas [i] > 4.0:
+                self.notas [i] - 0.5
+            elif self.notas [i] < 2.0:
+                self.notas [i] + 0.5
+            else:
+                self.notas [i] = self.notas [i]
+            
+            print(f"La nota {i+1} es igual a {self.notas[i]}")
+    
+    def darMenorNota (self):
+        notaMenor = self.notas[0]
+        for i in range(1, len(self.notas)):
+            if self.notas[i] < notaMenor:
+                notaMenor = self.notas[i]
+
+        return notaMenor 
+    
+    def darRangoConMasNotas(self):
+        rangos =[contadorRango1, contadorRango2, contadorRango3]
+        for i in range (len(self.notas)):
+            if self.notas [i]>0.0 and self.notas [i] < 2:
+                contadorRango1+=1
+            elif self.notas [i] >=2.0 and self.notas [i] <3.5:
+                contadorRango2 +=1
+            else:
+                contadorRango3 +=1
+
+            mayor = max(rangos)     #Recorre los 3 rangos y selecciona el mayor
+
+        return f'El rango con la mayor cantidad de notas es el rango: {rangos.index(mayor) + 1}'
+    
+        ##Tambien se hubiera podido de la siguiente forma:
+        # if contR1 >= contR2 and contR1 >= contR3:
+        #     return f'El rango con la mayor cantidad de notas es el rango:1'
+        # elif contR2 >= contR1 and contR2 >= contR3:
+        #     return f'El rango con la mayor cantidad de notas es el rango:2'
+        # else:
+        #     return f'El rango con la mayor cantidad de notas es el rango:3'
+
+        #No obstante, no es muy optima y por temas de buenas practicas se prefirio investigar el uso de index para evitar escribir mucho mas codigo 
+        #Index unicamente recorre el arreglo y devuelve la posicion donde se encuentra "mayor"               
 
         
