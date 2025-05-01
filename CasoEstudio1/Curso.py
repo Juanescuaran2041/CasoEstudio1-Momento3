@@ -9,7 +9,6 @@ class Curso:
         
     def LlenarNotas(self):
         for est_Cont in range(Curso.TOTAL_EST):
-            # Generamos una nota aleatoria entre 1.0 y 5.0 y la añadimos a la lista
             self.notas.append(round(random.uniform(4.0, 5.0),1))
    
    
@@ -139,16 +138,18 @@ class Curso:
                 return f'La cantidad minima de notas para lograr 30 es {i+1}'
         return -1
 
-    def cambiarNotas (self):
-        for i in range (len(self.notas)):
-            if self.notas [i] > 4.0:
-                self.notas [i] -= 0.5
-            elif self.notas [i] < 2.0:
-                self.notas [i] += 0.5
+    def cambiarNotas(self):
+        notas_copia = self.notas.copy() 
+
+        for i in range(len(notas_copia)):
+            if notas_copia[i] > 4.0:
+                notas_copia[i] -= 0.5 
+            elif notas_copia[i] < 2.0:
+                notas_copia[i] += 0.5  
             else:
-                self.notas [i] = self.notas [i]
-            
-            print(f"La nota {i+1} es igual a {self.notas[i]}")
+                notas_copia[i] = notas_copia[i]
+
+            print(f"La nota {i+1} es igual a {notas_copia[i]}")
     
     def darMenorNota (self):
         notaMenor = self.notas[0]
