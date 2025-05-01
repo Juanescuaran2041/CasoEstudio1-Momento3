@@ -142,9 +142,9 @@ class Curso:
     def cambiarNotas (self):
         for i in range (len(self.notas)):
             if self.notas [i] > 4.0:
-                self.notas [i] - 0.5
+                self.notas [i] -= 0.5
             elif self.notas [i] < 2.0:
-                self.notas [i] + 0.5
+                self.notas [i] += 0.5
             else:
                 self.notas [i] = self.notas [i]
             
