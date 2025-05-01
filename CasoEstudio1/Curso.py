@@ -127,7 +127,7 @@ class Curso:
 
     __method__ = "calcularMinimoNotas3"
     __params__ = "none"
-    __returns__ = "Null"
+    __returns__ = "Cantidad Minima notas"
     __description__ = "Metodo que sirve para saber la cantidad de notas minimas que se deben sumar para llegar a 30"
 
     def calcularMinimoNotas3 (self):
@@ -137,6 +137,11 @@ class Curso:
             if suma > 30:
                 return f'La cantidad minima de notas para lograr 30 es {i+1}'
         return -1
+
+    __method__ = "cambiarNotas"
+    __params__ = "none"
+    __returns__ = "Null"
+    __description__ = "Metodo que sirve para cambiar las notas"
 
     def cambiarNotas(self):
         notas_copia = self.notas.copy() 
@@ -151,6 +156,11 @@ class Curso:
 
             print(f"La nota {i+1} es igual a {notas_copia[i]}")
     
+    __method__ = "darMenorNota"
+    __params__ = "none"
+    __returns__ = "notaMenor"
+    __description__ = "Metodo que sirve para saber cual es la menor nota digitada"
+
     def darMenorNota (self):
         notaMenor = self.notas[0]
         for i in range(1, len(self.notas)):
@@ -159,6 +169,11 @@ class Curso:
 
         return f'La menor nota digitada es {notaMenor}' 
     
+    __method__ = "darRangoConMasNotas"
+    __params__ = "none"
+    __returns__ = "rangoConMasNotas"
+    __description__ = "Metodo que sirve en que rango se encuentra la mayor cantidad de notas"
+
     def darRangoConMasNotas(self):
 
         contadorRango1 = contadorRango2 = contadorRango3 = 0
