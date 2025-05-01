@@ -160,7 +160,6 @@ class Curso:
         return notaMenor 
     
     def darRangoConMasNotas(self):
-        rangos =[contadorRango1, contadorRango2, contadorRango3]
         for i in range (len(self.notas)):
             if self.notas [i]>0.0 and self.notas [i] < 2:
                 contadorRango1+=1
@@ -168,7 +167,8 @@ class Curso:
                 contadorRango2 +=1
             else:
                 contadorRango3 +=1
-
+                
+            rangos =[contadorRango1, contadorRango2, contadorRango3]
             mayor = max(rangos)     #Recorre los 3 rangos y selecciona el mayor
 
         return f'El rango con la mayor cantidad de notas es el rango: {rangos.index(mayor) + 1}'

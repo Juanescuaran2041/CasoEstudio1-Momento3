@@ -15,7 +15,10 @@ if __name__ == "__main__":
         print("| 3. EncontrarRepeticion5    |")
         print("| 4. CalcularMinimoNotas30   |")
         print("| 5. EncontrarPrimerasNotas  |")
-        print("| 6. Salir                   |")
+        print("| 6. cambiarNotas            |")
+        print("| 7. darMenorNota            |")
+        print("| 8. darRangoconMasNota      |")
+        print("| 9. Salir                   |")
         print("+----------------------------+")
 
     while True:
