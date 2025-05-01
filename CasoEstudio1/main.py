@@ -4,7 +4,7 @@ if __name__ == "__main__":
     curso = Curso()
     
     # Asignar notas para pruebas
-    curso.notas = [2.0, 2.0, 3.0, 5.0, 2.8, 5.0, 4.0, 4.2, 3.5, 5.0, 2.5, 3.0]
+    curso.notas = [2.0, 2.0, 3.0, 5.0, 2.8, 5.0, 4.0, 4.2, 3.5, 5.0, 1.5, 3.0]
 
     def mostrar_menu():
         print("+----------------------------+")
@@ -14,7 +14,7 @@ if __name__ == "__main__":
         print("| 2. RemplazarNotas          |")
         print("| 3. EncontrarRepeticion5    |")
         print("| 4. CalcularMinimoNotas30   |")
-        print("| 5. CalcularMayorNota       |")
+        print("| 5. EncontrarPrimerasNotas  |")
         print("| 6. Salir                   |")
         print("+----------------------------+")
 
@@ -39,8 +39,7 @@ if __name__ == "__main__":
             print(f"\n{resultado}")
 
         elif opcion == "5":
-            mayor = curso.CalcularMayorNota()
-            print(f"\nLa mayor nota es: {mayor}")
+            curso.EncontrarPrimerasNotas()
 
         elif opcion == "6":
             print("Saliendo del programa...")
