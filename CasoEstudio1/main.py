@@ -48,10 +48,12 @@ if __name__ == "__main__":
             curso.cambiarNotas()
             
         elif opcion == "7":
-            curso.darMenorNota()
+            resultado = curso.darMenorNota()
+            print(f"\n{resultado}")
 
         elif opcion == "8":
-            curso.darRangoConMasNotas()
+            resultado = curso.darRangoConMasNotas()
+            print(f"\n{resultado}")
 
         elif opcion == "9":
             print("Saliendo del programa...")

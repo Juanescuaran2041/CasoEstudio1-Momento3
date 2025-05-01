@@ -187,6 +187,6 @@ class Curso:
         #     return f'El rango con la mayor cantidad de notas es el rango:3'
 
         #No obstante, no es muy optima y por temas de buenas practicas se prefirio investigar el uso de index para evitar escribir mucho mas codigo 
-        #Index unicamente recorre el arreglo y devuelve la posicion donde se encuentra "mayor"               
+          
 
         
