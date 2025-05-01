@@ -80,6 +80,7 @@ class Curso:
     __params__ = "none"
     __returns__ = "Null"
     __description__ = "Metodo que sirve para encontrar las primeras notas iguales a 1.5 y sobreescribirlas como 2.5"
+
     def EncontrarPrimerasNotas(self):
         Repeticion = 0
         notas_copia = self.notas.copy()
@@ -87,8 +88,8 @@ class Curso:
             if self.notas[i] == 1.5 and Repeticion < 3:
                 self.notas[i] = 2.5
                 Repeticion += 1
-
-            print(f"La nota {i+1} es {notas_copia[i]}")
+            print(f"Nota {i+1}: antes = {notas_copia[i]}, después = {self.notas[i]}")
+            
     __method__ = "EncontrarRepeticion5"
     __params__ = "none"
     __returns__ = "Posicion del tercer 5"
