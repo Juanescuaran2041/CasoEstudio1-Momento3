@@ -18,7 +18,8 @@ if __name__ == "__main__":
         print("| 6. cambiarNotas            |")
         print("| 7. darMenorNota            |")
         print("| 8. darRangoconMasNota      |")
-        print("| 9. Salir                   |")
+        print("| 9. CalcularMedianaNotas    |")
+        print("| 10.Salir                   |")
         print("+----------------------------+")
 
     while True:
@@ -56,6 +57,10 @@ if __name__ == "__main__":
             print(f"\n{resultado}")
 
         elif opcion == "9":
+            resultado = curso.CalcularMediana()
+            print(f"\n{resultado}")
+
+        elif opcion == "10":
             print("Saliendo del programa...")
             break
         

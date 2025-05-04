@@ -189,17 +189,25 @@ class Curso:
             rangos =[contadorRango1, contadorRango2, contadorRango3]
             mayor = max(rangos)     #Recorre los 3 rangos y selecciona el mayor
 
-        return f'El rango con la mayor cantidad de notas es el rango: {rangos.index(mayor) + 1}'
-    
-        ##Tambien se hubiera podido de la siguiente forma:
-        # if contR1 >= contR2 and contR1 >= contR3:
-        #     return f'El rango con la mayor cantidad de notas es el rango:1'
-        # elif contR2 >= contR1 and contR2 >= contR3:
-        #     return f'El rango con la mayor cantidad de notas es el rango:2'
-        # else:
-        #     return f'El rango con la mayor cantidad de notas es el rango:3'
+        return f'El rango con la mayor cantidad de notas es el rango: {rangos.index(mayor) + 1}'        
 
-        #No obstante, no es muy optima y por temas de buenas practicas se prefirio investigar el uso de index para evitar escribir mucho mas codigo 
-          
+    def CalcularMediana (self):
+        for i in range (len(self.notas)):
+            for j in range (i+1): ##Damos un nuevo bucle que itera sobre la variable siguiente a i
+                if self.notas[j] < self.notas[i]:
+                    AnteriorNota = self.notas[i]
+                    self.notas[i] = self.notas[j] ## la nota i obtiene el espacio en el arreglo de la nota J
+                    self.notas[j] = AnteriorNota   ## La nota j obtiene el espacio de la primera nota o de i originalmente
+        
+        # Lo anterior para que en casos en que las notas no esten ordendas, el programa las ordene de menor a mayor
 
+        total = len(self.notas)
+        mitad = total//2
+
+        if total % 2 == 1:
+            return f'La mediana es {self.notas[mitad]}'
+        
+        else:
+            return f'La mediana puede ser {self.notas[mitad]} o {self.notas[mitad-1]}'
+            
         
