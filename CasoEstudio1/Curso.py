@@ -159,7 +159,6 @@ class Curso:
             else:
                 notas_copia[i] = notas_copia[i]
 
-            #print(f"La nota {i+1} es igual a {notas_copia[i]}")
         return notas_copia
     
     __method__ = "darMenorNota"
