@@ -1,3 +1,8 @@
+__name__ = "Juan Esteban Cuaran Santander"
+__license__ = "GPL"
+__version__ = "1.0.0"
+__email__ = "juan.cuaran@campusucc.edu.co" 
+
 import random
 class Curso:
    
@@ -83,11 +88,11 @@ class Curso:
     def EncontrarPrimerasNotas(self):
         Repeticion = 0
         notas_copia = self.notas.copy()
-        for i in range(len(self.notas)):
-            if self.notas[i] == 1.5 and Repeticion < 3:
-                self.notas[i] = 2.5
+        for i in range(len(notas_copia)):
+            if notas_copia[i] == 1.5 and Repeticion < 3:
+                notas_copia[i] = 2.5
                 Repeticion += 1
-            print(f"Nota {i+1}: antes = {notas_copia[i]}, después = {self.notas[i]}")
+        return notas_copia
 
     __method__ = "EncontrarRepeticion5"
     __params__ = "none"
@@ -123,7 +128,8 @@ class Curso:
                 notas_copia[i] = 0.0
                 break
 
-            print(f"La nota {i+1} es {notas_copia[i]}")
+            #print(f"La nota {i+1} es {notas_copia[i]}")
+        return notas_copia
 
     __method__ = "calcularMinimoNotas3"
     __params__ = "none"
@@ -154,7 +160,8 @@ class Curso:
             else:
                 notas_copia[i] = notas_copia[i]
 
-            print(f"La nota {i+1} es igual a {notas_copia[i]}")
+            #print(f"La nota {i+1} es igual a {notas_copia[i]}")
+        return notas_copia
     
     __method__ = "darMenorNota"
     __params__ = "none"
@@ -192,22 +199,23 @@ class Curso:
         return f'El rango con la mayor cantidad de notas es el rango: {rangos.index(mayor) + 1}'        
 
     def CalcularMediana (self):
-        for i in range (len(self.notas)):
+        notas_copia = self.notas.copy()
+        for i in range (len(notas_copia)):
             for j in range (i+1): ##Damos un nuevo bucle que itera sobre la variable siguiente a i
-                if self.notas[j] < self.notas[i]:
-                    AnteriorNota = self.notas[i]
-                    self.notas[i] = self.notas[j] ## la nota i obtiene el espacio en el arreglo de la nota J
-                    self.notas[j] = AnteriorNota   ## La nota j obtiene el espacio de la primera nota o de i originalmente
+                if notas_copia[j] < notas_copia[i]:
+                    AnteriorNota =  notas_copia[i]
+                    notas_copia[i] = notas_copia[j] ## la nota i obtiene el espacio en el arreglo de la nota J
+                    notas_copia[j] = AnteriorNota   ## La nota j obtiene el espacio de la primera nota o de i originalmente
         
         # Lo anterior para que en casos en que las notas no esten ordendas, el programa las ordene de menor a mayor
 
-        total = len(self.notas)
+        total = len(notas_copia)
         mitad = total//2
 
         if total % 2 == 1:
-            return f'La mediana es {self.notas[mitad]}'
+            return f'La mediana es {notas_copia[mitad]}'
         
         else:
-            return f'La mediana puede ser {self.notas[mitad]} o {self.notas[mitad-1]}'
+            return f'La mediana puede ser {notas_copia[mitad]} o {notas_copia[mitad-1]}'
             
         

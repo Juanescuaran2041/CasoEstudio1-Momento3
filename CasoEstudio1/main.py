@@ -1,3 +1,8 @@
+__name__ = "Juan Esteban Cuaran Santander"
+__license__ = "GPL"
+__version__ = "1.0.0"
+__email__ = "juan.cuaran@campusucc.edu.co" 
+
 from Curso import Curso
 
 if __name__ == "__main__":
@@ -32,7 +37,9 @@ if __name__ == "__main__":
 
         elif opcion == "2":
             print("\nHasta la primera nota mayor a 3 se remplazaran las anteriores con 0.0\n")
+            resultado = curso.RemplazarNotas()
             curso.RemplazarNotas()
+            print(f"\n{resultado}")
 
         elif opcion == "3":
             resultado = curso.EncontrarRepeticion5()
@@ -43,10 +50,14 @@ if __name__ == "__main__":
             print(f"\n{resultado}")
 
         elif opcion == "5":
+            resultado = curso.EncontrarPrimerasNotas()
             curso.EncontrarPrimerasNotas()
+            print(f"\n Primeras Notas 1.5 cambiadas a 2.5 {resultado}")
         
         elif opcion == "6":
+            resultado = curso.cambiarNotas()
             curso.cambiarNotas()
+            print(f"\n{resultado}")
             
         elif opcion == "7":
             resultado = curso.darMenorNota()
