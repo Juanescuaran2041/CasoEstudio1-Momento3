@@ -50,12 +50,12 @@ class Curso:
                 Cantidad = contador
                
         return notaR
-   
 
     __method__ = "CalcularMayorNota"
     __params__ = "none"
     __returns__ = "Null"
     __description__ = "Metodo que sirve para calcular la mayor nota"
+    
     def CalcularMayorNota (self):
         notaMayor = 0
         for i in range (len(self.notas)):
