@@ -55,7 +55,7 @@ class Curso:
     __params__ = "none"
     __returns__ = "Null"
     __description__ = "Metodo que sirve para calcular la mayor nota"
-    
+
     def CalcularMayorNota (self):
         notaMayor = 0
         for i in range (len(self.notas)):
@@ -128,7 +128,6 @@ class Curso:
                 notas_copia[i] = 0.0
                 break
 
-            #print(f"La nota {i+1} es {notas_copia[i]}")
         return notas_copia
 
     __method__ = "calcularMinimoNotas3"
